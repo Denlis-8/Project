@@ -1,0 +1,18 @@
+Details of Public chain deployment Rinkeby:
+
+   Deployment of 'firmTrade.sol':
+
+     Transaction hash:    0xfa5bd071b4490076fb5f855e5ae40e2cbd8b4e7c79ea7c340b258ef684bbad07
+     Contract address:    0x745e5D304910D316D1cCeb8D700b19E4E50E6FE6
+     Link            :    https://rinkeby.etherscan.io/tx/0xfa5bd071b4490076fb5f855e5ae40e2cbd8b4e7c79ea7c340b258ef684bbad07
+
+
+
+
+Details of Public chain deployment Ropsten:
+
+   Deployment of 'firmTrade.sol':
+
+     Transaction hash:    0x17bc3aba568794ac97b59697a496ae641a1cc408bef1cd00ee3d2dce35eb5a9b
+     Contract address:    0x8b8d9eD9af4f716867A17f41Cd58F7E7aC228755
+     Link            :    https://ropsten.etherscan.io/tx/0x17bc3aba568794ac97b59697a496ae641a1cc408bef1cd00ee3d2dce35eb5a9b
