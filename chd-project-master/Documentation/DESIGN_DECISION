@@ -1,0 +1,30 @@
+
+------------------------------------------------------------------------------------------- VOLTRON ---------------------------------------------------------------------------------------------------
+
+Note:
+
+Voltron contains 3 levels for a transparent flow of vehicles from the supplier till it reaches the consumer. It includes Supplier (produces individual vehicle parts from raw materials and sends it to manufacturer), Manufacturer (verify the details, makes the car and sends it to the distributer) and Distributer (verify the details and sends it to the customer). There is another participant, the Admin, who handles the role assinging.
+The Customer gets to view the transactions between each participants.
+Each product has a unique product id, product name and dates.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.There are two Transaction processors in our application, in which one is for Role Assigning and the other one is for Vehicle and Product traceability. 
+
+2. Addressing Scheme in Role Assigning
+First 6 characters are the first characters of the hash of the Role Assigning Transaction Family, then the next four characters are the first 4 characters of the hash of the corresponding values assigned for the Role name(like Manufacturer, Supplier and Distributer) and the rest 60 characters are the first 60 characters of the hash of the public key of the corresponding role.
+
+ROLETP["NAMESPACE"] + getHash(ROLES[Role.toUpperCase()], 4) + getHash(publicKey, 60)
+
+3. Addressing Scheme in Vehicle and Product traceability
+The addressing scheme for Item is in such a manner that the first 6 characters are the first characters of the hash of the Vehicle Traceability Transaction Family, then the next four characters are first four characters of the hash of the corresponding values assigned for the Supplier, similarly for the rest of the roles
+
+VEHICLETP["NAMESPACE"] + getHash(ROLES["SUPPLIER"], 4) + getHash(supplierName, 4) + getHash(itemID, 6) + getHash(supplierPublicKey, 50)
+
+VEHICLETP["NAMESPACE"] + getHash(ROLES["MANUFACTURER"], 4) + getHash(manufacturerName, 4) + getHash(prodID, 6) + getHash(manufacturerPublicKey, 50)
+
+4. Node's of the network :
+   Supplier, Manufacturer, Distributer and Admin
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
